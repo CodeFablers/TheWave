@@ -1,8 +1,8 @@
 postgresql_base: &postgresql_base
   adapter: postgresql
   host: localhost
-  username: root
-  password: friend
+  username: <username>
+  password: <password>
   encoding: utf8
   reconnect: true
   pool: 5
