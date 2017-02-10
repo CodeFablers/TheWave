@@ -12,6 +12,8 @@ gem 'puma', '~> 3.0'
 # ================================ FRONT  ====================================
 # Use SASS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Font awesome icons
+gem 'font-awesome-rails'
 # Front-end framework
 gem 'foundation-rails'
 # Use Uglifier as compressor for JavaScript assets
