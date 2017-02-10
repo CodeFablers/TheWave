@@ -41,20 +41,20 @@ group :development, :test do
 end
 
 group :development do
+  gem 'factory_girl_rails', '4.5.0'
+  gem 'faker'
+  gem 'listen', '~> 3.0.5'
+  gem 'rspec-rails', '~> 3.5.0'
   # <%= console %> anywhere in the code.
   gem 'web-console'
-  gem 'listen', '~> 3.0.5'
-  gem 'rubocop'
-  gem 'faker'
-  gem 'rspec-rails', '~> 3.5.0'
-  gem 'factory_girl_rails', '4.5.0'
 end
 
 group :test do
-  gem 'shoulda-matchers', '2.7.0'
-  gem 'rails-controller-testing'
-  gem 'simplecov'
   gem 'database_cleaner'
-  gem 'nyan-cat-formatter', git: 'git@github.com:pinglamb/nyan-cat-formatter.git'
+  gem 'nyan-cat-formatter',
+      git: 'git@github.com:pinglamb/nyan-cat-formatter.git'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers', '2.7.0'
+  gem 'simplecov'
 end
 # ============================= /DEVELOPMENT  ================================
