@@ -1,8 +1,8 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
-require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
+require 'spec_helper'
 
 Dir["#{::Rails.root}/spec/test_helpers/**/*.rb"].each { |helper| require helper }
 
@@ -32,8 +32,6 @@ RSpec.configure do |config|
 
   config.include Devise::Test::ControllerHelpers, type: :controller
 
-  config.include FactoryGirl::Syntax::Methods
-
   config.include Shoulda::Matchers::ActiveModel,
                  type: :model, file_path: /spec\/models/
   config.include Shoulda::Matchers::ActiveRecord,
@@ -42,9 +40,9 @@ RSpec.configure do |config|
                  type: :model, file_path: /spec\/controllers/
 
   # Custom helpers
-  config.include Requests::JsonHelper, type: :controller
-  config.include Requests::SessionHelper, type: :request
-  config.include Requests::JsonHelper, type: :request
+  # config.include Requests::JsonHelper, type: :controller
+  # config.include Requests::SessionHelper, type: :request
+  # config.include Requests::JsonHelper, type: :request
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false

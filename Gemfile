@@ -44,7 +44,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'factory_girl_rails', '4.5.0'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
   gem 'listen', '~> 3.0.5'
   gem 'rspec-rails', '~> 3.5.0'
