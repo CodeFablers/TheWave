@@ -1,0 +1,16 @@
+doctype html
+html[lang="en"]
+  head
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    title
+      | The WaveBro
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'layouts/main'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'main_page/textillate'
+    = javascript_include_tag 'main_page/type_it_js'
+    = javascript_include_tag 'main_page/main'
+    = csrf_meta_tags
+  body
+    = yield

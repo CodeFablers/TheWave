@@ -1,0 +1,36 @@
+.main-tip
+  font-family: 'Chocolate'
+  opacity: 0.4
+  min-width: 100px
+  max-width: 200px
+  // border: dotted 1px
+  padding: 10px
+  display: inline-block
+  z-index: -1
+  @include breakpoint(small only)
+    visibility: hidden
+  @include breakpoint(medium up)
+    margin: 12% 20%
+    font-size: 1.8em
+  @include breakpoint(xlarge up)
+    margin: 35% 25%
+    font-size: 2em
+  &.tip-1
+    -ms-transform: rotate(15deg)
+    -webkit-transform: rotate(15deg)
+    transform: rotate(15deg)
+
+  &.tip-2
+    -ms-transform: rotate(1deg)
+    -webkit-transform: rotate(1deg)
+    transform: rotate(1deg)
+
+  &.tip-3
+    -ms-transform: rotate(10deg)
+    -webkit-transform: rotate(1deg)
+    transform: rotate(10deg)
+
+  &.tip-4
+    -ms-transform: rotate(-2deg)
+    -webkit-transform: rotate(-2deg)
+    transform: rotate(-2deg)

@@ -1,0 +1,11 @@
+div[style="text-align: center;"]
+  h4
+
+  p[style="height: 20%"]
+    |  You just wanted to sign up into TheWave, did you? 
+  p[style="background-color: #5EBD00; border-radius: 20px; height: 70%;"]
+
+  h3
+    = link_to 'Confirm', confirmation_url(@resource, confirmation_token: @token)
+  p
+    |  P.S.: If someone bad do that instead of you, just relax and ignore this letter 

@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require_tree .
+//= require typed.min
+//= require textillate/jquery.fittext.js
+//= require textillate/jquery.lettering.js
+//= require textillate/jquery.textillate.js
 
 $(function(){ $(document).foundation(); });
