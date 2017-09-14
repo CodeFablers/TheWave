@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    confirmations: 'devise_override/confirmations',
+    sessions: 'devise_override/sessions'
+  }
 
   resource :profile, only: %i[show edit update], controller: :profile
 
