@@ -3,16 +3,13 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'spec_helper'
+require 'faker'
 
-Dir["#{::Rails.root}/spec/test_helpers/**/*.rb"].each { |helper| require helper }
+Dir["#{::Rails.root}/spec/support/**/*.rb"].each { |helper| require helper }
 
 ActiveRecord::Migration.maintain_test_schema!
 
 DatabaseCleaner.strategy = :truncation
-
-SimpleCov.start 'rails' do
-  add_group 'Scenaries', 'app/scenaries'
-end
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
@@ -38,11 +35,6 @@ RSpec.configure do |config|
                  type: :model, file_path: /spec\/models/
   config.include Shoulda::Matchers::ActionController,
                  type: :model, file_path: /spec\/controllers/
-
-  # Custom helpers
-  # config.include Requests::JsonHelper, type: :controller
-  # config.include Requests::SessionHelper, type: :request
-  # config.include Requests::JsonHelper, type: :request
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
