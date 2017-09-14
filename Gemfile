@@ -46,6 +46,7 @@ end
 group :development do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
+  gem 'letter_opener', '~> 1.4.0'
   gem 'listen', '~> 3.0.5'
   gem 'rspec-rails', '~> 3.5.0'
   # <%= console %> anywhere in the code.
